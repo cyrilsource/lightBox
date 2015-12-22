@@ -1,0 +1,87 @@
+/* lightbox */
+
+#overlay {
+    display : none; /* Par défaut, on cache l'overlay */
+
+    position: absolute;
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; height: 100%;
+    text-align: center; /* Pour centrer l'image que l'overlay contiendra */
+
+    /* Ci-dessous, nous appliquons un background de couleur noire et d'opacité 0.8. Il s'agit d'une propriété CSS3. */
+    background-color: rgba(0,0,0,0.8);
+}
+
+#overlay img {
+    margin-top: 100px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+       
+}
+
+#lbox-nav-prev,
+#lbox-nav-next {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 20%;
+    height: inherit;
+    opacity: 0;
+}
+
+#lbox-nav-prev:hover,
+#lbox-nav-next:hover {
+    cursor: pointer;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+    opacity: 1;
+}
+
+
+#lbox-nav-prev {
+    left: 10%;
+    background: url('../img/before.png') left 50% no-repeat;   
+}
+
+#lbox-nav-next {
+    right: 10%;
+    background: url('../img/next.png') right 50% no-repeat;  
+}
+
+#lbox-close {
+    display: block;
+    position: absolute;
+    top: 15%;
+    right: 15%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    background: #000;
+    border: 2px solid #fff;
+    border-radius: 50%; 
+    z-index: 10000;
+ }
+ 
+#lbox-close:hover {
+    cursor: pointer;
+    background: #666;
+        -moz-transition: all 0.4s ease-in;
+        -webkit-transition: all 0.4s ease-in;
+    transition: all 0.4s ease-in;
+}
+
+#overlay img {
+    border: 5px solid #fff;
+    border-radius: 10px;
+       
+}
+
