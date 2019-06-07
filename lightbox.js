@@ -6,7 +6,6 @@ for (var i = 0; i < linksLen; i++) {
 	links[i].id = i;
 }
  
- 
 for (var i = 0 ; i < linksLen ; i++) {
  
     links[i].addEventListener('click', function(e) {
@@ -20,10 +19,8 @@ for (var i = 0 ; i < linksLen ; i++) {
  
 function displayImg(link) {
 
-	
     var img = new Image(),
     overlay = document.getElementById('overlay');
- 
  
     img.addEventListener('load', function() {
  
@@ -46,7 +43,7 @@ function displayImg(link) {
 	// clique sur la flèche gauche pour image précédente
 	prev.addEventListener('click', function(e) {
 		x = link.getAttribute('id');
-		
+
 		newlink = document.getElementById(x-1);
 		displayImg(newlink);	
 	    	    
@@ -74,13 +71,8 @@ function displayImg(link) {
  
 	img.style.maxHeight = '75%';
 	img.style.maxWidth = '75%';
-    img.src = link.href;
- 
+    	img.src = link.href;
 	overlay.style.display = 'block'
 	
-		
- 
 }
  
-
-
